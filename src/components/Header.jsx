@@ -14,7 +14,7 @@ const Header = ({ openModal, handleComponent }) => {
       exit={{ opacity: 0 }}
       transition={{ duration: 1 }}
 
-      className="hidden lg:flex fixed top-0 lg:w-[50%] lg:mx-auto mt-6 left-0 right-0 z-10 text-white px-5 py-2 items-center bg-black/40 backdrop-blur-lg bg-opacity-30 h-fit justify-between rounded-lg">
+      className="hidden lg:flex fixed top-0 lg:w-[50%] lg:mx-auto mt-6 left-0 right-0 z-10 text-white px-5 py-2 items-center bg-black/40 backdrop-blur-lg bg-opacity-30 h-fit justify-between rounded-3xl">
       <div className='flex items-center'>
         <Logo brand={'Iconic Events'} />
       </div>

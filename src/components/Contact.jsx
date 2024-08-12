@@ -10,7 +10,7 @@ const Contact = ({ isOpen, onClose }) => {
                     <Input placeholder={'Name'} label="Name" name="name" type="text" />
                     <Input placeholder={'Email'} label="Email" name="email" type="email" />
                     <Textarea label="Message" rows="5" cols={'5'} placeholder={'Message'} />
-                    <Button btnText={'Submit'} className={'bg-blue-500 text-white hover:scale-101 p-3 rounded-lg hover:bg-blue-600 duration-200'} />
+                    <Button btnText={'Submit'} className={'bg-black/80 text-orange-500 hover:scale-101 p-3 rounded-lg hover:text-black hover:bg-orange-600 duration-200'} />
                 </form>
             </div>
         </Modal>

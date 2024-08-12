@@ -1,5 +1,6 @@
 
 import { ArrowRightCircleIcon } from "@heroicons/react/16/solid";
+import Gradient from './Gradient'
 const Hero = () => {
     return (
         <div className="relative h-full w-full">
@@ -23,6 +24,9 @@ const Hero = () => {
                         <button className="">Explore services</button>
                     </div>
                 </div>
+            </div>
+            <div className="bottom-0">
+                <Gradient />
             </div>
         </div>
     );
