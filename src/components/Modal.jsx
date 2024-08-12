@@ -18,7 +18,7 @@ const Modal = ({ isOpen, onClose, title, children }) => {
                 {/* footer */}
                 <div className="flex justify-end">
                     <button
-                        className="bg-orange-500 text-white px-4 py-2 rounded hover:bg-orange-600"
+                        className="bg-orange-300 text-black px-4 py-2 rounded hover:bg-orange-400"
                         onClick={onClose}
                     >
                         Close
