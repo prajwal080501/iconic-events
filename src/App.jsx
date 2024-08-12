@@ -17,7 +17,7 @@ function App() {
     setComponent(componentName)
   }
   return (
-    <div className='bg-zinc-900 overflow-y-scroll h-full snap-conainer'>
+    <div className='bg-zinc-900  h-fit snap-container'>
       <Header handleComponent={handleComponent} openModal={openModal} />
       <Contact isOpen={isModalOpen} onClose={closeModal} />
       <section className="snap-section h-screen">
