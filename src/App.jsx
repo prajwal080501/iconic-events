@@ -2,6 +2,7 @@ import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
 import Hero from "./components/Hero";
+import MobileIcon from "./components/MobileIcon";
 import Mobilenav from "./components/Mobilenav";
 import Section from "./components/Section";
 import Services from "./components/Services";
@@ -19,6 +20,7 @@ function App() {
   return (
     <div className='bg-zinc-900  h-fit snap-container'>
       <Header handleComponent={handleComponent} openModal={openModal} />
+      <MobileIcon />
       <Contact isOpen={isModalOpen} onClose={closeModal} />
       <section className="snap-section h-screen">
         <Hero />
