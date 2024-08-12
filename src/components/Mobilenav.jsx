@@ -17,9 +17,8 @@ const Mobilenav = ({ openModal }) => {
           })
         }
       </div>
-      {/* <div className='inline-flex items-center'>
-        <Button onClick={openModal} className="text-normal font-bold hover:bg-blue-600 duration-200 hover:scale-105 p-2 rounded-lg bg-blue-500" btnText={'Lets Talk'} />
-      </div> */}
+      <Button onClick={openModal} className="text-normal font-bold hover:bg-blue-600 duration-200 hover:scale-105 p-2 rounded-lg bg-blue-500" btnText={'Get a quote'} />
+
     </nav>
   )
 }
