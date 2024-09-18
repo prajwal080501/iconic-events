@@ -36,7 +36,7 @@ const Mobilenav = ({ openModal }) => {
         isVisible ? "opacity-100" : "opacity-0 pointer-events-none"
       }`}
     >
-      <div className="flex justify-evenly items-center gap-8">
+      <div className="w-fit flex justify-evenly items-center gap-8">
         {mobileMenu.map((menu, index) => {
           const IconComponent = menu.icon;
           return <IconComponent key={index} className="w-6 h-6 text-white" />;

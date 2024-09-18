@@ -3,3 +3,5 @@ const Video = ({ src }) => {
         <video className={className}></video>
     )
 }
+
+export default Video

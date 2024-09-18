@@ -5,7 +5,7 @@ const Modal = ({ isOpen, onClose, title, children }) => {
 
     return createPortal(
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50">
-            <div className="bg-zinc-900 rounded-xl p-6 w-[85%] lg:max-w-lg lg:w-full">
+            <div className="bg-zinc-900 rounded-xl h-[90%] overflow-y-auto p-6 w-[85%] lg:max-w-lg lg:w-full">
                 {/* Header */}
                 <div className="flex justify-between items-center mb-4">
                     <h2 className="text-3xl font-bold text-white">{title}</h2>

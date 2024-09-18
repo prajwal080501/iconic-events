@@ -3,8 +3,7 @@ import { motion } from 'framer-motion';
 import Logo from './Logo'
 import { navMenu } from '../data/data'
 import Button from './Button'
-import { CgMenuLeftAlt } from "react-icons/cg";
-
+import { Link } from "react-router-dom";
 const Header = ({ openModal, handleComponent }) => {
 
   return (
@@ -14,15 +13,15 @@ const Header = ({ openModal, handleComponent }) => {
       exit={{ opacity: 0 }}
       transition={{ duration: 1 }}
 
-      className="hidden lg:flex fixed top-0 lg:w-[50%] lg:mx-auto mt-6 left-0 right-0 z-10 text-white px-5 py-2 items-center bg-black/40 backdrop-blur-lg bg-opacity-30 h-fit justify-between rounded-3xl">
-      <div className='flex items-center'>
+      className="hidden lg:flex fixed top-0 lg:w-[70%] lg:mx-auto mt-6 left-0 right-0 z-10 text-white px-5 py-2 items-center bg-black/40 backdrop-blur-lg bg-opacity-30 h-fit justify-between rounded-3xl">
+      <Link to="/" className='flex items-center'>
         <Logo brand={'Iconic Events'} />
-      </div>
+      </Link>
       <div className='hidden lg:inline-flex gap-14 px-6 items-center'>
         {navMenu.map((item, index) => (
-          <p onClick={() => {
-            handleComponent(item.name)
-          }} key={index} className='text-white hover:text-orange-300 duration-200 ease font-medium cursor-pointer'>{item.menuName}</p>
+          <Link to={`/${item.path}`}>
+            {item.menuName}
+          </Link>
         ))}
       </div>
       <div className='hidden lg:flex items-center'>

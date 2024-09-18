@@ -9,6 +9,10 @@ html, body, :root {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif, sans-serif;
 }
 
+::-webkit-scrollbar {
+  display: none;
+}
+
 .snap-container {
     scroll-snap-type: y mandatory;
   }

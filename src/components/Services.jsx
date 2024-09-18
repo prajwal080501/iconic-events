@@ -1,6 +1,5 @@
 import React from 'react';
 import Card from './Card';
-import Section from './Section';
 
 const services = [
   {
@@ -27,7 +26,7 @@ const services = [
 
 const Services = () => {
   return (
-    <div className="flex flex-col justify-center">
+    <div className="flex flex-col justify-center px-4 md:px-0">
       <p className="mb-12 text-center text-white/40">
         We offer a range of services to make your event unforgettable. Discover what we can do for you.
       </p>
@@ -40,4 +39,5 @@ const Services = () => {
   );
 };
 
-export default Services;
+
+export default Services

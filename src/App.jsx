@@ -1,38 +1,35 @@
-import Contact from "./components/Contact";
-import Footer from "./components/Footer";
-import Header from "./components/Header";
-import Hero from "./components/Hero";
-import MobileIcon from "./components/MobileIcon";
-import Mobilenav from "./components/Mobilenav";
-import Section from "./components/Section";
-import Services from "./components/Services";
-import TestimonialSlider from './components/TestimonialSlider'
-import { useState } from 'react';
+import Maps from './components/Maps'
+import {
+  Hero,
+  MobileIcon,
+  Section,
+  Services,
+  Divider,
+  TestimonialSlider,
+  ImageCarousel
+} from './components/components'
+import { testimonials } from "./data/data"
 function App() {
-  const [isModalOpen, setIsModalOpen] = useState(false);
-  const openModal = () => setIsModalOpen(true);
-  const closeModal = () => setIsModalOpen(false);
-  const [component, setComponent] = useState('service');
-  const handleComponent = (componentName) => {
-    console.log(componentName, 'componentName')
-    setComponent(componentName)
-  }
   return (
-    <div className='bg-zinc-900  h-fit snap-container'>
-      <Header handleComponent={handleComponent} openModal={openModal} />
+    <div className='bg-zinc-900 h-fit snap-container'>
       <MobileIcon />
-      <Contact isOpen={isModalOpen} onClose={closeModal} />
-      <section className="snap-section h-screen">
+      <section className="snap-section min-h-screen md:h-screen">
         <Hero />
       </section>
-      <Section title={component.charAt(0).toUpperCase() + component.slice(1)}>
-        {component === 'service' ? <Services /> : ""}
-        {component === 'testimonials' && <TestimonialSlider />}
+      <Section title="Services">
+        <Services />
       </Section>
-      <Footer brandName={'Iconic Events'} />
-      <Mobilenav openModal={openModal} />
+        <Divider className={'bg-orange-500'} />
+      <Section title="Hear what our customers say" subtitle="Valuable feedbacks from customer">
+        <TestimonialSlider testimonials={testimonials} />
+      </Section>
+      <Divider className={'bg-orange-500'} />
+      <Section title="Our Past Events" subtitle="Experience our past events">
+        <ImageCarousel />
+      </Section>
     </div>
-  )
+  );
+
 }
 
 export default App
