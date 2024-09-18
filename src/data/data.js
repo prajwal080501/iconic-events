@@ -45,6 +45,11 @@ export const navMenu = [
         path: 'gallery'
     },
     // {
+    //     menuName: 'Contact',
+    //     name: 'contact',
+    //     path: 'contact'
+    // }
+    // {
     //     menuName: 'Testimonials',
     //     name: "testimonials"
     // },
