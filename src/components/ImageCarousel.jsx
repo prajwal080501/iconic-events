@@ -43,9 +43,9 @@ const ImageCarousel = () => {
     <div className="w-full max-w-5xl mx-auto mt-10">
       <Slider {...settings}>
         {images.map((image, index) => (
-          <div key={index} className="relative w-fit h-96 flex items-center justify-center bg-transparent">
+          <div key={index} className="relative w-[80%] mx-auto lg:mx-0 lg:w-fit h-96 flex items-center justify-center bg-transparent">
             {/* Image */}
-            <img src={image.src} alt={image.alt} className="w-[100%] mx-auto drop-shadow-2xl h-full object-cover rounded-lg shadow-lg" />
+            <img src={image.src} alt={image.alt} className=" w-[80%] mx-auto lg:mx-0 lg:w-[100%] mx-auto drop-shadow-2xl h-full object-cover rounded-lg shadow-lg" />
             
             {/* Text Overlay at Bottom */}
             <div className="absolute bottom-0 w-full bg-black bg-opacity-60 text-white py-4 rounded-b-md">

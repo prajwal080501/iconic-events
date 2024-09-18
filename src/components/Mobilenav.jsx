@@ -12,14 +12,13 @@ const Mobilenav = ({ openModal }) => {
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
 
-      if (currentScrollY > lastScrollY && window.innerHeight + currentScrollY >= document.body.offsetHeight - 100) {
-        // User is scrolling down and near the bottom of the page
-        setIsVisible(false);
-      } else if (currentScrollY < lastScrollY) {
-        // User is scrolling up
-        setIsVisible(true);
+      // Hide nav when scrolling down, show it when scrolling up
+      if (currentScrollY > lastScrollY) {
+        setIsVisible(false); // scrolling down
+      } else {
+        setIsVisible(true); // scrolling up
       }
-
+      
       setLastScrollY(currentScrollY);
     };
 
@@ -32,8 +31,8 @@ const Mobilenav = ({ openModal }) => {
 
   return (
     <nav
-      className={`fixed bottom-2 w-[80%] mx-auto left-0 right-0 z-10 text-white px-5 py-4 flex bg-transparent backdrop-blur-lg bg-opacity-30 h-fit justify-around rounded-lg lg:hidden transition-opacity duration-300 ${
-        isVisible ? "opacity-100" : "opacity-0 pointer-events-none"
+      className={`fixed bottom-2 w-[90%] mx-auto left-0 right-0 z-20 text-white px-5 py-4 flex bg-black/60 backdrop-blur-md h-fit justify-around rounded-lg lg:hidden transition-all duration-300 ${
+        isVisible ? "translate-y-0 opacity-100" : "translate-y-20 opacity-0"
       }`}
     >
       <div className="w-fit flex justify-evenly items-center gap-8">
